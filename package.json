@@ -2,20 +2,30 @@
   "name": "shop-elements",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4242",
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.2.0",
+    "@stripe/stripe-js": "^1.11.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "stripe": "^8.131.1",
+    "web-vitals": "^0.2.4",
+    "winston": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node server.js",
+    "shop": "concurrently \"npm run server\" \"npm start\""
   },
   "eslintConfig": {
     "extends": [
